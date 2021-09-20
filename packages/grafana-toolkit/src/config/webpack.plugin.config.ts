@@ -118,6 +118,10 @@ const getCommonPlugins = (options: WebpackConfigurationOptions) => {
         files: ['plugin.json', 'README.md'],
         rules: [
           {
+            search: '%NAME%',
+            replace: packageJson.name,
+          },
+          {
             search: '%VERSION%',
             replace: packageJson.version,
           },
